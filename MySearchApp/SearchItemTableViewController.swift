@@ -91,7 +91,7 @@ class SearchItemTableViewController: UITableViewController, UISearchBarDelegate 
         if let price_from = price_from {parameter.updateValue(price_from, forKey:"price_from")}
         if let price_to   = price_to {parameter.updateValue(price_to, forKey:"price_to")}
         parameter.updateValue(hits.description, forKey:"hits")
-        if let sort       = sort {parameter.updateValue(sortDict[sort]!, forKey:"sort")}
+        /*if let sort       = sort {parameter.updateValue(sortDict[sort]!, forKey:"sort")}*/
         if let condition  = condition {parameter.updateValue(conditionDict[condition]!, forKey:"condition")}
         
         offset = min(offset + hits, 1000 - hits)
