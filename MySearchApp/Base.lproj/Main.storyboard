@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cPg-rs-tbR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Item Table View Controller-->
+        <scene sceneID="MLP-Th-ftT">
+            <objects>
+                <tableViewController id="Ngw-mA-s9h" customClass="SearchItemTableViewController" customModule="MySearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gTp-Ai-iJi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="検索キーワードを入力してください" id="BaS-xb-JDc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Ngw-mA-s9h" id="Ttr-qs-hFn"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="YZM-vU-yR4" customClass="ItemTableViewCell" customModule="MySearchApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YZM-vU-yR4" id="Xrs-Ao-nMx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eY3-xC-2Gf">
+                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="OTY-Sq-MjZ"/>
+                                                <constraint firstAttribute="height" constant="100" id="Wdn-nE-EPg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8T-qt-voh">
+                                            <rect key="frame" x="118" y="10" width="247" height="78.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="価格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSN-Fc-jSu">
+                                            <rect key="frame" x="118" y="88.5" width="247" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="4Jm-gV-D8H"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eY3-xC-2Gf" firstAttribute="leading" secondItem="Xrs-Ao-nMx" secondAttribute="leading" constant="10" id="2Kj-p8-UxP"/>
+                                        <constraint firstAttribute="trailing" secondItem="OSN-Fc-jSu" secondAttribute="trailing" constant="10" id="3md-pc-p2g"/>
+                                        <constraint firstItem="eY3-xC-2Gf" firstAttribute="top" secondItem="Xrs-Ao-nMx" secondAttribute="top" constant="10" id="Cys-jW-2IX"/>
+                                        <constraint firstAttribute="bottom" secondItem="OSN-Fc-jSu" secondAttribute="bottom" constant="10" id="Lug-m4-qSv"/>
+                                        <constraint firstItem="E8T-qt-voh" firstAttribute="top" secondItem="eY3-xC-2Gf" secondAttribute="top" id="SfT-Nr-RbF"/>
+                                        <constraint firstItem="OSN-Fc-jSu" firstAttribute="leading" secondItem="eY3-xC-2Gf" secondAttribute="trailing" constant="8" id="T4U-pN-8xo"/>
+                                        <constraint firstItem="OSN-Fc-jSu" firstAttribute="top" secondItem="E8T-qt-voh" secondAttribute="bottom" id="Wuz-BA-yHh"/>
+                                        <constraint firstItem="OSN-Fc-jSu" firstAttribute="leading" secondItem="E8T-qt-voh" secondAttribute="leading" id="YnZ-J1-Ksc"/>
+                                        <constraint firstItem="OSN-Fc-jSu" firstAttribute="trailing" secondItem="E8T-qt-voh" secondAttribute="trailing" id="s97-sz-lyd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="itemImageView" destination="eY3-xC-2Gf" id="fPB-hj-BuB"/>
+                                    <outlet property="itemPriceLabel" destination="OSN-Fc-jSu" id="8u0-7V-58Q"/>
+                                    <outlet property="itemTitleLabel" destination="E8T-qt-voh" id="kwd-pL-2dw"/>
+                                    <segue destination="goy-Eb-ima" kind="show" identifier="goDetail" id="49Q-oK-50z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ngw-mA-s9h" id="zFR-oJ-eEn"/>
+                            <outlet property="delegate" destination="Ngw-mA-s9h" id="vKy-Xk-cWA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3DQ-bA-Pj2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="RUD-sn-N2z">
+                            <connections>
+                                <segue destination="faI-Xa-WxF" kind="show" identifier="goParam" id="0fS-tq-dX3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="gTp-Ai-iJi" id="EGn-io-epf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCk-c6-XRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="132.68365817091455"/>
+        </scene>
+        <!--Param View Controller-->
+        <scene sceneID="9zy-yc-eS2">
+            <objects>
+                <viewController id="faI-Xa-WxF" customClass="ParamViewController" customModule="MySearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8dc-fP-7Ee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yH-Xw-puw">
+                                <rect key="frame" x="30" y="94" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最低金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07J-up-P2B">
+                                <rect key="frame" x="51" y="137" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最高金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G1-TV-hBo">
+                                <rect key="frame" x="51" y="176" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ソート条件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-aG-xfi">
+                                <rect key="frame" x="30" y="219" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="状態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX5-AT-tOH">
+                                <rect key="frame" x="30" y="401" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Zm-tj-a0g">
+                                <rect key="frame" x="0.0" y="248" width="375" height="145"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-og-wjt">
+                                <rect key="frame" x="0.0" y="443" width="375" height="145"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-by-ynb">
+                                <rect key="frame" x="182" y="132" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41f-EE-9p2">
+                                <rect key="frame" x="182" y="171" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-kz-Wc0">
+                                <rect key="frame" x="133" y="617" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="検索条件を保存"/>
+                                <connections>
+                                    <action selector="save:" destination="faI-Xa-WxF" eventType="touchUpInside" id="9WK-Gc-oPr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="E8p-Xo-T98"/>
+                    </view>
+                    <connections>
+                        <outlet property="condition" destination="2UY-og-wjt" id="fsp-Rr-kzU"/>
+                        <outlet property="from" destination="AxX-by-ynb" id="Wc7-Av-1iI"/>
+                        <outlet property="sort" destination="3Zm-tj-a0g" id="F21-EF-07l"/>
+                        <outlet property="to" destination="41f-EE-9p2" id="dd0-YP-J0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxd-Ce-5o3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="850.52473763118451"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="pVb-Jz-SC9">
+            <objects>
+                <viewController id="goy-Eb-ima" customClass="WebViewController" customModule="MySearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p7h-db-VLc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeJ-dv-1n3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AeJ-dv-1n3" firstAttribute="top" secondItem="fVn-m6-8Bb" secondAttribute="top" id="N9r-aa-kBK"/>
+                            <constraint firstItem="AeJ-dv-1n3" firstAttribute="leading" secondItem="fVn-m6-8Bb" secondAttribute="leading" id="RWN-qf-LNx"/>
+                            <constraint firstItem="fVn-m6-8Bb" firstAttribute="bottom" secondItem="AeJ-dv-1n3" secondAttribute="bottom" id="eBL-2j-HX8"/>
+                            <constraint firstItem="fVn-m6-8Bb" firstAttribute="trailing" secondItem="AeJ-dv-1n3" secondAttribute="trailing" id="pHM-gT-A8K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fVn-m6-8Bb"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="AeJ-dv-1n3" id="y68-ym-vEV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptr-Kd-pMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cxm-qV-iIM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cPg-rs-tbR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zaw-Em-S0T">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ngw-mA-s9h" kind="relationship" relationship="rootViewController" id="XBe-14-FWQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xv8-nP-l0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.60000000000002" y="132.23388305847078"/>
+        </scene>
+    </scenes>
+</document>

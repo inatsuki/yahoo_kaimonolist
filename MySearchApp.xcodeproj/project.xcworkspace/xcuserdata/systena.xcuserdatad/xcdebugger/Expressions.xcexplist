@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SearchItemTableViewController.encodeParameter(key:value:):SearchItemTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)">
+            </PersistentString>
+            <PersistentString
+               value = "&quot;+&quot;.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchItemTableViewController.request(requestUrl:):SearchItemTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SearchItemTableViewController.search(searchQuery:):SearchItemTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SearchItemTableViewController.search():SearchItemTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "offset">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ParamViewController.save(_:):ParamViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "to.text">
+            </PersistentString>
+            <PersistentString
+               value = "condition_array[condition.selectedRow(inComponent: 0)]">
+            </PersistentString>
+            <PersistentString
+               value = "sort_array[sort.selectedRow(inComponent: 0)]">
+            </PersistentString>
+            <PersistentString
+               value = "from.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
